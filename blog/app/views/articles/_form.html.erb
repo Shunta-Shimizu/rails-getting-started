@@ -1,6 +1,6 @@
 <%= form_with model: article do |form| %>
     <div>
-        <%= form.label :ttitle %><br>
+        <%= form.label :title %><br>
         <%= form.text_field :title %>
         <% article.errors.full_messages_for(:title).each do |message| %>
         <div>
