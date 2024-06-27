@@ -2,21 +2,27 @@
 
 <p><%= @article.body %></p>
 
+<p>
+  <strong>Image</strong>
+  <% if @article.images.attached? %>
+    <div class="image-gallery">
+      <% @article.images.each do |image| %>
+        <div class="image-item">
+          <%= image_tag image %><br>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+
+  <% end %>
+</p>
+
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
   <li><%= button_to "Destroy", article_path(@article),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
 </ul>
-
-<p>
-  <strong>画像:</strong>
-  <% if @article.image.attached? %>
-    <%= image_tag @article.image %>
-  <% else %>
-    画像が添付されていません。
-  <% end %>
-</p>
 
 <h2>Comments</h2>
 <%= render @article.comments %>

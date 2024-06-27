@@ -15,9 +15,9 @@
         <% end %>
     </div>
 
-    <div class="field">
-        <%= form.label :image %>
-        <%= form.file_field :image %>
+    <div>
+        <%= form.label :images %><br>
+        <%= form.file_field :images, multiple: true %>
     </div>
 
     <div>

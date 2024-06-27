@@ -53,6 +53,6 @@ class ArticlesController < ApplicationController
   
   private
     def article_params
-      params.require(:article).permit(:title, :body, :status, :image)  # :imageを追加
+      params.require(:article).permit(:title, :body, :status, images: [])
     end
 end
