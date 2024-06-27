@@ -9,6 +9,15 @@
                   data: { confirm: "Are you sure?" } %></li>
 </ul>
 
+<p>
+  <strong>画像:</strong>
+  <% if @article.image.attached? %>
+    <%= image_tag @article.image %>
+  <% else %>
+    画像が添付されていません。
+  <% end %>
+</p>
+
 <h2>Comments</h2>
 <%= render @article.comments %>
 
