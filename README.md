@@ -28,4 +28,6 @@ bin/rails db:migrate
 ```
 
 ### Railsコンソールの起動
+```
 bin/rails console
+```
