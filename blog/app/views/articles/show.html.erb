@@ -22,8 +22,8 @@
 
 <p>
   <strong>Function</strong><br>
-  <%= button_to "Edit", edit_article_path(@article) %><br>
-  <%= button_to "Destroy", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to "Edit", edit_article_path(@article) %><br>
+  <%= button_to "Destroy", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></li>
 </p>
 
 <h2>Comments</h2>
