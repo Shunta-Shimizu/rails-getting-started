@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .image-item {
+    flex: 0 1 auto;
+  }
+  
