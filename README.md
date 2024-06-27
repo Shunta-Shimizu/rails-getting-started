@@ -23,3 +23,9 @@ end
 ### データベースマイグレーション
 - マイグレーションを実行すると, "articles"という名前のテーブルが作成させる
 - title, bodyというカラムを定義
+```
+bin/rails db:migrate
+```
+
+### Railsコンソールの起動
+bin/rails console
