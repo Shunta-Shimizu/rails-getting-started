@@ -1,7 +1,5 @@
 <h1><%= @article.title %></h1>
 
-<p><%= @article.body %></p>
-
 <p>
   <strong>Image</strong>
   <% if @article.images.attached? %>
@@ -17,12 +15,16 @@
   <% end %>
 </p>
 
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= button_to "Destroy", article_path(@article),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
-</ul>
+<p>
+  <strong>Text</strong><br>
+  <%= @article.body %>
+</p>
+
+<p>
+  <strong>Function</strong><br>
+  <%= button_to "Edit", edit_article_path(@article) %><br>
+  <%= button_to "Destroy", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+</p>
 
 <h2>Comments</h2>
 <%= render @article.comments %>
