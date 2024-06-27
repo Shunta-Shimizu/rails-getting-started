@@ -20,11 +20,31 @@ Rails.application.routes.draw do
 end
 ```
 
+### モデルの生成
+```
+bin/rails generate model model_name
+```
+
 ### データベースマイグレーション
-- マイグレーションを実行すると, "articles"という名前のテーブルが作成させる
-- title, bodyというカラムを定義
 ```
 bin/rails db:migrate
+```
+
+### モデルの削除
+  - データベースマイグレーションしていない場合
+    ```
+    bin/rails destroy model model_name
+    ```
+  - データベースマイグレーションしている場合
+    - データベースをrollbackしてから削除する 
+    ```
+    bin/rails db:rollback
+    bin/rails destroy model model_name
+    ```
+
+### コントローラの生成
+```
+bin/rails generate controller model_name
 ```
 
 ### Railsコンソールの起動
@@ -32,10 +52,14 @@ bin/rails db:migrate
 bin/rails console
 ```
 
-### 画像をアップロードする機能を追加
+# 画像をアップロードする機能
+ 作成したブログ記事のWebアップリケーションに文章だけでなく，画像を掲載できるように機能を追加した．また，自分のPCのフォルダから画像を選択し，複数枚ある場合は横並びで表示させるようにした．
+画像は，記事の新規作成，編集時にアップロード可能．
+### セットアップ
 - Active Storageを使用
 ```
 brew install imagemagick
+```
 
 - Gemfileを編集．以下の2つを追記し，`bundle install`を実行．
 ```
@@ -43,3 +67,11 @@ gem 'mini_magick'
 gem 'image_processing'
 ```
 - ActiveStorageのインストール
+```
+bin/ails active_storage:install
+bin/rails db:migrate
+```
+
+### 参考文献
+- https://takapinosuke.hatenablog.com/entry/2020/10/21/234140
+- https://qiita.com/oak1331/items/830755889a37ceee1bc6
