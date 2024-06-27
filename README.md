@@ -31,3 +31,15 @@ bin/rails db:migrate
 ```
 bin/rails console
 ```
+
+### 画像をアップロードする機能を追加
+- Active Storageを使用
+```
+brew install imagemagick
+
+- Gemfileを編集．以下の2つを追記し，`bundle install`を実行．
+```
+gem 'mini_magick'
+gem 'image_processing'
+```
+- ActiveStorageのインストール
