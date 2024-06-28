@@ -74,4 +74,7 @@ bin/rails db:migrate
 
 ### 参考文献
 - https://takapinosuke.hatenablog.com/entry/2020/10/21/234140
+- https://zenn.dev/redheadchloe/articles/6a8d78d0a903a3
 - https://qiita.com/oak1331/items/830755889a37ceee1bc6
+- https://zenn.dev/tya0116/articles/1d05bb09ad43f0
+- https://qiita.com/trafford_777/items/339ac0416b1505fa0fc6
